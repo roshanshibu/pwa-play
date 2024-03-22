@@ -16,7 +16,7 @@ self.addEventListener("fetch", (e) => {
     console.log("offline");
     const url = new URL(e.request.url);
     if (url.pathname.endsWith("svg")) {
-      e.respondWith(fetch("/dog.svg"));
+      e.respondWith(caches.match("/dog.svg"));
     } else {
       e.respondWith(caches.match("/offline-1.html"));
     }
