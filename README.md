@@ -9,3 +9,10 @@ Making a very simple PWA with NextJS shouldn't require installing a package.
 1. Create a manifest.json file in the public directory.
 2. Create a service-worker.js file in the public directory.
 3. Update `app/layout.js` to specify manifest and a themeColor in viewport.
+
+### [Register the Service Worker](https://github.com/roshanshibu/pwa-play/commit/6a8919df1718be65da7135881009127093b0c6e8)
+
+At this point the service worker is available, but not being used.
+
+1. Create a script file that will register the service worker at `public/sw-register.js`
+2. Invoke this script in the root layout file using `Script` from `next/script`
